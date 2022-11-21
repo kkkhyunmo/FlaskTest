@@ -10,3 +10,7 @@ def hello_pybo():
 @bp.route('/')
 def index():
     return redirect(url_for('question._list'))
+
+@bp.route('/chatBot')
+def chatbot():
+    return redirect(url_for('chatbot.chatbot'))

@@ -1,0 +1,29 @@
+<html>
+    <script language=javascript>
+        function getPost(mode)
+        {
+            var theForm = document.frmSubmit;
+              if(mode == "01")
+            {
+                theForm.method = "post";
+                theForm.target = "_self";
+                 theForm.action = "http://127.0.0.1:8080/index1.html";
+            }
+            else if(mode == "02")
+               {
+                  theForm.method = "get";
+                  theForm.target = "_self";
+                  theForm.action = "http://127.0.0.1:8080/index1.html"
+            }
+            theForm.submit();
+        }
+      </script>
+      <body>
+        <form name=frmSubmit>
+          <input type=text name=id><br>
+          <input type=text name=name><br>
+          <input type=button name=btn1 value="Submit01" onClick="getPost('01')">
+          <input type=button name=btn2 value="Submit02" onClick="getPost('02')">
+        </form>
+    </body>
+</html>
